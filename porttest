@@ -1,6 +1,6 @@
 server {
 	listen 80 default_server;
-	server_name portquiz.mcnc.org;
+	server_name porttest.example.com;
 	#listen [::]:80 default_server;
 
 	# SSL configuration
@@ -19,7 +19,7 @@ server {
 	#
 	# include snippets/snakeoil.conf;
 
-	root /var/www/portquiz;
+	root /var/www/porttest;
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.php index.nginx-debian.html;
