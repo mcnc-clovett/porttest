@@ -29,8 +29,6 @@ cp porttest /etc/nginx/sites-available/
 cd /etc/nginx/sites-enabled/
 rm default
 ln -s ../sites-available/porttest .
-# Reload Nginx server configuration
-systemctl reload nginx
 ```
 
 ### Firewall configuration
@@ -85,3 +83,22 @@ Apply the firewall configuration. If any errors occur, check the configuration a
 # Running the file applies the configuration
 /etc/nftables.conf
 ```
+
+### Web server configuration
+Use nano ( or your preferred editor) to edit the /etc/nginx/sites-available/porttest file.
+```sh
+nano /etc/nginx/sites-available/porttest
+```
+
+Set the "server\_name" line to the URL you'll be using for the server.
+```nginx
+server_name porttest.example.com
+```
+
+Save and close the file, then reload the Nginx service.
+```sh
+systemctl reload nginx
+```
+
+### Testing the server
+You should now be able to visit the server in a browser at http://<ipaddress>:<port>
