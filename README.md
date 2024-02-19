@@ -101,4 +101,4 @@ systemctl reload nginx
 ```
 
 ### Testing the server
-You should now be able to visit the server in a browser at http://<ipaddress>:<port>
+You should now be able to visit the server in a browser at http://\<ipaddress\>:\<port\>
